@@ -7,10 +7,10 @@ window.addEventListener('load', function () {
     var self = this;
 
     // Create the title observable
-    self.title = Bindy.observable('');
+    self.title = Knity.observable('');
 
     // Create the item observable
-    self.item = Bindy.observable('');
+    self.item = Knity.observable('');
 
     /*
      * Custom function for the item observable
@@ -37,7 +37,7 @@ window.addEventListener('load', function () {
     };
 
     // Create the allItems observable
-    self.allItems = Bindy.observable([]);
+    self.allItems = Knity.observable([]);
 
     self.computeTotal = function () {
       self.title('Number of elements (' + self.allItems().length + ')');
@@ -52,7 +52,7 @@ window.addEventListener('load', function () {
   var viewModel = new viewModel();
 
   // Attach the View Model to the DOM
-  Bindy.attach(viewModel, document);
+  Knity.attach(viewModel, document);
 
   document.querySelector('.submit-btn').addEventListener('click', function (evt) {
     evt.preventDefault();

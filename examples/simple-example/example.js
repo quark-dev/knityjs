@@ -13,7 +13,7 @@ window.addEventListener('load', function () {
     var self = this;
 
     // Create the title observable
-    self.title = Bindy.observable('');
+    self.title = Knity.observable('');
 
     return self;
   };
@@ -21,7 +21,7 @@ window.addEventListener('load', function () {
   var viewModel = new viewModel();
   
   // Attach the View Model with the DOM
-  Bindy.attach(viewModel, document);
+  Knity.attach(viewModel, document);
 
   var times = 1;
 

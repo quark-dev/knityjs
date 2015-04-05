@@ -32,7 +32,7 @@ window.addEventListener('load', function () {
     };
 
     // Create the title observable
-    self.title = Bindy.observable();
+    self.title = Knity.observable();
 
     // Use the onUpdate function to define a custom listener
     self.title('').onUpdate(customUpdate);
@@ -43,7 +43,7 @@ window.addEventListener('load', function () {
   var viewModel = new viewModel();
 
   // Attach the View Model to the DOM
-  Bindy.attach(viewModel, document);
+  Knity.attach(viewModel, document);
 
   var times = 1;
 

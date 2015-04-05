@@ -3,20 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bindy Example</title>
+    <title>Knity Example</title>
   </head>
   <body>
 
-    <h1 data-bindy="text: title"></h1>
+    <h1 data-knity="text: title"></h1>
 
     <label for="add-item">Insert Item</label>
-    <input type="text" name="add-item" data-bindy="value: item">
+    <input type="text" name="add-item" data-knity="value: item">
 
-    <p>Value in field: <span data-bindy="text: item"></span></p>
+    <p>Value in field: <span data-knity="text: item"></span></p>
 
     <button class="submit-btn">Submit</button>
 
-    <ul data-bindy="foreach: allItems">
+    <ul data-knity="foreach: allItems">
       <li>
         <a href="#" data-index="{{$index}}" data-delete="true">delete</a>
         {{name}}
@@ -24,7 +24,7 @@
       </li>
     </ul>
 
-    <script src="../../dist/bindy.js"></script>
+    <script src="../../dist/knity.js"></script>
     <script src="example.js"></script>
   </body>
 </html>
