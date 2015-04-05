@@ -2,9 +2,9 @@ var jsdom = require('mocha-jsdom');
 var assert = require('assert');
 var expect = require('chai').expect;
 
-var Bindy = require('../src/bindy.js');
+var Knity = require('../src/knity.js');
 
-describe('Bindy tests', function() {
+describe('Knity tests', function() {
 
 	jsdom();
 
@@ -13,21 +13,21 @@ describe('Bindy tests', function() {
 		it('should throw Error when we do not pass any arguments', function() {
 
 			expect(function() {
-				(Bindy.attach());
+				(Knity.attach());
 			}).to.throw('The view model must be an object');
 		});
 
 		it('should throw Error when we do not pass a valid View-Model', function() {
 
 			expect(function() {
-				(Bindy.attach('string as a vm'));
+				(Knity.attach('string as a vm'));
 			}).to.throw('The view model must be an object');
 		});
 
 		it('should throw Error when we do not pass a valid DOM element', function() {
 
 			expect(function() {
-				(Bindy.attach({}, null));
+				(Knity.attach({}, null));
 			}).to.throw('The View-Model must be attached to a DOM element. object given');
 		});
 
@@ -37,7 +37,7 @@ describe('Bindy tests', function() {
 
 				var div = document.createElement('div');
 
-				(Bindy.attach( {}, div ));
+				(Knity.attach( {}, div ));
 			}).to.not.throw(Error);
 		});
 	});
@@ -46,7 +46,7 @@ describe('Bindy tests', function() {
 
 		it('should return hello', function() {
 			
-			var observable = Bindy.observable( '' );
+			var observable = Knity.observable( '' );
 
 			observable( 'hello' );
 
@@ -55,7 +55,7 @@ describe('Bindy tests', function() {
 
 		it('should return 3', function() {
 			
-			var observable = Bindy.observable( 0 );
+			var observable = Knity.observable( 0 );
 
 			observable( 3 );
 
@@ -64,14 +64,14 @@ describe('Bindy tests', function() {
 		
 		it('should return an array of values', function() {
 			
-			var observable = Bindy.observable( ['a', 'b', 'c'] );
+			var observable = Knity.observable( ['a', 'b', 'c'] );
 
 			expect(observable()).deep.equal( ['a', 'b', 'c'] );
 		});
 		
 		it('should return an array of objects', function() {
 			
-			var observable = Bindy.observable( [ {letter: 'a'}, {letter: 'b'} ] );
+			var observable = Knity.observable( [ {letter: 'a'}, {letter: 'b'} ] );
 
 			expect(observable()).deep.equal( [ {letter: 'a'}, {letter: 'b'} ] );
 		});
