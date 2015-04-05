@@ -1,0 +1,14 @@
+bin
+node_modules
+*.tmp
+
+# OS files
+.DS_Store
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editors
+*.sublime-project
+*.sublime-workspace

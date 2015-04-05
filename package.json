@@ -1,0 +1,21 @@
+{
+  "name": "KnityJS",
+  "version": "0.1.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/quark-dev/knityjs.git"
+  },
+  "author": "Quarkdev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/quark-dev/knityjs/issues"
+  },
+  "homepage": "https://github.com/quark-dev/knityjs",
+  "devDependencies": {
+    "gulp": "3.8.x",
+    "gulp-babel": "^4.0.0",
+    "gulp-jshint": "^1.9.2",
+    "gulp-minify": "0.0.5"
+  }
+}

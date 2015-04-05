@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bindy Example</title>
+  </head>
+  <body>
+
+    <h1 data-bindy="text: title"></h1>
+
+    <label for="add-item">Insert Item</label>
+    <input type="text" name="add-item" data-bindy="value: item">
+
+    <p>Value in field: <span data-bindy="text: item"></span></p>
+
+    <button class="submit-btn">Submit</button>
+
+    <ul data-bindy="foreach: allItems">
+      <li>
+        <a href="#" data-index="{{$index}}" data-delete="true">delete</a>
+        {{name}}
+        <span style="font-size: 12px;">{{date}}</span>
+      </li>
+    </ul>
+
+    <script src="../../dist/bindy.js"></script>
+    <script src="example.js"></script>
+  </body>
+</html>
